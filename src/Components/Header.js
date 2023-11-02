@@ -4,7 +4,6 @@ import Logo from "../Images/Logo.png"
 import Menu from "../Images/menu.png"
 
 const Header = () => {
-    const [isOpen, setIsOpen] = useState(false);
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
