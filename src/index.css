@@ -1,13 +1,535 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: hsl(225, 6%, 88%, 1);
+  font-family: "Inter", sans-serif;
+}
+
+/* NavBar Styles */
+.navbar {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 70px;
+  align-items: center;
+}
+
+/* Navbar Items */
+.nav-list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Navbar List */
+.nav-list li {
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Navbar List on hover behaviour */
+.nav-list li:hover {
+  text-decoration: underline hsla(221, 100%, 50%, 1);
+  text-underline-offset: 8px;
+}
+
+/* KoinX Logo */
+.logo {
+  margin-left: 60px;
+  cursor: pointer;
+}
+
+/* SignIn Button (Outer) */
+.signin {
+  margin-right: 60px;
+  font-family: "Inter", sans-serif;
+}
+
+/* SignIn Button */
+.signin button {
+  border: 1px solid hsla(221, 100%, 50%, 1);
+  background-color: white;
+  color: hsla(221, 100%, 50%, 1);
+  margin-top: 2px;
+  padding: 8px 35px;
+  font-weight: 600;
+  font: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* SignIn Button on hover behaviour */
+.signin button:hover {
+  border: 1px solid white;
+  background-color: hsla(221, 100%, 50%, 1);
+  color: white;
+}
+
+/* Menu Icon */
+.menu {
+  display: none;
+}
+
+/* Navbar Mobile Styles  */
+.nav-list-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  margin-top: 10px;
+  padding: 15px 40px;
+  list-style: none;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
+
+/* Signin Button (Mobile) */
+.signin-mobile button {
+  border: 1px solid hsla(221, 100%, 50%, 1);
+  background-color: white;
+  color: hsla(221, 100%, 50%, 1);
+  padding: 10px 25px;
+  font-weight: 600;
+  font: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Signin Button on hover behaviour (Mobile) */
+.signin-mobile button:hover {
+  border: 1px solid white;
+  background-color: hsla(221, 100%, 50%, 1);
+  color: white;
+}
+
+/* Container Styles */
+.container-box {
+  background-color: white;
+  height: 100vh;
+  width: 48%;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-left: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* container title styles */
+.container-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+}
+
+/* container subtitle styles */
+.container-box h1 {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+/* container section-1 styles */
+.container-section1 {
+  display: flex;
+  gap: 5px;
+}
+
+/* container section-1 financial year styles */
+.financial_yr {
+  display: flex;
+  gap: 8px;
+  margin-right: 32px;
+}
+
+/* container section-1 financial year p styles */
+.financial_yr p {
+  margin-top: 5px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* container section-1 financial year toggle styles */
+.financial-toggle {
+  background-color: hsla(210, 23%, 95%, 1);
+  border: hsla(210, 23%, 95%, 1);
+  color: black;
+  display: flex;
+  align-items: center;
+  padding: 8px 18px;
+  gap: 20px;
+}
+
+/* container section-1 flag item styles */
+.flag_item {
+  display: flex;
+  gap: 8px;
+}
+
+/* container section-1 flag item styles */
+.country {
+  display: flex;
+  gap: 8px;
+}
+
+/* container section-1 flag item p styles */
+.country p {
+  margin-top: 5px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* container section-1 flag item toggle styles */
+.country-toggle-items {
+  display: flex;
+  gap: 8px;
+}
+
+/* container section-1 flag item toggle styles */
+.country-toggle {
+  background-color: hsla(210, 23%, 95%, 1);
+  border: hsla(210, 23%, 95%, 1);
+  color: black;
+  display: flex;
+  align-items: center;
+  padding: 8px 18px;
+  gap: 45px;
+}
+
+/* container section-2 styles */
+.container-section2 {
+  display: flex;
+  margin-top: 30px;
+  gap: 40px;
+}
+
+/* container section-2 crypto price input styles */
+.crypto_price_input {
+  background-color: hsl(225, 6%, 88%, 1);
+  height: 45px;
+  width: 250px;
+}
+
+.crypto_price_label {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* container section-2 crypto sale input styles */
+.crypto_sale_input {
+  background-color: hsl(225, 6%, 88%, 1);
+  height: 45px;
+  width: 250px;
+}
+
+.crypto_sale_label {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* container section-3 styles */
+.container-section3 {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: -20px;
+  margin-right: 50px;
+  margin-left: 95px;
+  gap: 42px;
+}
+
+/* container section-3 crypto expenses input styles */
+.crypto_expenses_input {
+  background-color: hsl(225, 6%, 88%, 1);
+  height: 45px;
+  width: 250px;
+}
+
+.crypto_expenses_label {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.investment p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* container section-3 short and long term button styles */
+.invest_btn {
+  display: flex;
+  gap: 5px;
+  margin-top: -10px;
+}
+
+/* container section-3 short and long term button styles */
+.invest_btn div Button {
+  display: flex;
+  align-items: center;
+  width: 147px; 
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+/* container section-3 short and long term button p styles */
+.invest_btn div p {
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+/* container section-3 short and long term button img styles */
+.tick {
+  width: 25px;
+  margin-left: 12px;
+}
+
+/* container section-3 short and long term button on click behaviour img styles */
+.tick_hide {
+  visibility: hidden;
+  width: 25px;
+  margin-left: 12px;
+}
+
+/* container section-4 styles */
+.container-section4 {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 25px;
+  gap: 70px;
+}
+
+/* container section-4 income styles */
+.income {
+  display: flex;
+  flex-direction: column;
+  width: 225px;
+}
+
+.income p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* container section-4 income toggle styles */
+.income-toggle {
+  background-color: hsla(210, 23%, 95%, 1);
+  border: hsla(210, 23%, 95%, 1);
+  color: black;
+  display: flex;
+  align-items: center;
+  padding: 8px 18px;
+  gap: 40px;
+  margin-top: -8px;
+}
+
+/* container section-4 tax rate styles */
+.tax {
+  margin-top: 2px;
+  width: 278px;
+}
+
+.tax p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: hsla(222, 9%, 27%, 1);
+}
+
+/* container section-4 tax rate p styles */
+.tax > p{
+  margin-bottom: 2px;
+}
+
+/* container section-5 styles */
+.container-section5 {
+  display: flex;
+  margin-top: 12px;
+  gap: 46px;
+}
+
+/* container section-5 gains input styles */
+.gains_input {
+  background-color: hsl(225, 6%, 88%, 1);
+  height: 45px;
+  width: 250px;
+}
+
+.gains_label {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* container section-5 discount input styles */
+.discount_input {
+  background-color: hsl(225, 6%, 88%, 1);
+  height: 45px;
+  width: 250px;
+}
+
+.discount_label {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* container section-6 styles */
+.container-section6 {
+  display: flex;
+  gap: 45px;
+  margin-top: 35px;
+}
+
+.net_capital {
+  background-color: hsla(161, 51%, 95%, 1);
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.net_capital h4 {
+  font-size: 18px;
+}
+
+.net_capital_value {
+  color: hsla(161, 85%, 39%, 1);
+}
+
+.tax_pay {
+  background-color: hsla(219, 100%, 96%, 1);
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tax_pay h4 {
+  font-size: 18px;
+}
+
+.tax_pay_value {
+  color: hsla(221, 99%, 41%, 1);
+}
+
+@media (max-width: 768px) {
+  .nav-list {
+    display: none;
+  }
+  .logo {
+    margin-left: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  .menu {
+    display: block;
+    cursor: pointer;
+    margin-right: 30px;
+    margin-top: 8px;
+  }
+  .menu img {
+    width: 35px;
+  }
+  .container-box {
+    width: 90%;
+    height: 170vh;
+    margin: auto;
+    margin-top: 15px;
+  }
+  .container-section1 {
+    gap: 10px;
+  }
+  .financial_yr {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .country {
+    flex-direction: column;
+    gap: 0px;
+  }
+  .financial-toggle {
+    padding: 8px 10px;
+    margin-top: -12px;
+    gap: 20px;
+  }
+  .country-toggle {
+    padding: 8px 10px;
+    margin-top: -12px;
+    gap: 20px;
+  }
+
+  .container-section2 {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .container-section3 {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+    margin-right: 0px;
+    margin-left: 55px;
+  }
+
+  .invest_btn div Button {
+    width: 150px; 
+    height: 40px;
+    margin-bottom: 5px;
+  }
+   
+  .tick {
+    width: 25px;
+    margin-left: px;
+  }
+  
+  .tick_hide {
+    visibility: hidden;
+    width: 25px;
+    margin-left: 12px;
+  }
+
+  .container-section4 {
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+    margin-left: 0px;
+  }
+  .income {
+    margin-left: 25px;
+  }
+  .income-toggle {
+    margin-top: -8px;
+  }
+  .tax {
+    display: flex;
+    gap: 8px;
+    margin-top: 5px;
+    font-size: 13px;
+  }
+  .container-section5 {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .container-section6 {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
