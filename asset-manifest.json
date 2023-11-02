@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/koinx_assignment/static/css/main.3a5d533f.css",
+    "main.css": "/koinx_assignment/static/css/main.43ed0da3.css",
     "main.js": "/koinx_assignment/static/js/main.df208104.js",
     "static/media/Frame.png": "/koinx_assignment/static/media/Frame.0f9d1923ac82d59b8f6b.png",
     "index.html": "/koinx_assignment/index.html",
-    "main.3a5d533f.css.map": "/koinx_assignment/static/css/main.3a5d533f.css.map",
+    "main.43ed0da3.css.map": "/koinx_assignment/static/css/main.43ed0da3.css.map",
     "main.df208104.js.map": "/koinx_assignment/static/js/main.df208104.js.map"
   },
   "entrypoints": [
-    "static/css/main.3a5d533f.css",
+    "static/css/main.43ed0da3.css",
     "static/js/main.df208104.js"
   ]
 }
